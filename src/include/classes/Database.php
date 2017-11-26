@@ -6,7 +6,21 @@
 
 namespace ranel\Database;
 
-include "../config.php";
-include "Database/MySQL.php";
+require_once(dirname(__FILE__)."/../config.php");
+require_once(dirname(__FILE__)."/Database/MySQL.php");
 
-class Database{}
+class Database{
+
+    public function __construct()
+    {
+        try
+        {
+            $MySQL = new \ranel\Database\MySQL();
+        }
+        catch(Exception $e)
+        {
+            die("Error caught " . $e);
+        }
+    }
+    
+}

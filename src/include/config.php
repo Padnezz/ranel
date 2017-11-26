@@ -15,10 +15,10 @@ class General{
 
 //Database configuration for MySQL
 class MySQL{
-    const DATABASE = "";
-    const HOST = "";
-    const USERNAME = "";
-    const PASSWORD = "";
+    const DATABASE = "ranel";
+    const HOST = "127.0.0.1";
+    const USERNAME = "user";
+    const PASSWORD = "pass";
 }
 
 ?>
