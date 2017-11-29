@@ -19,7 +19,7 @@ class Database{
         }
         catch(Exception $e)
         {
-            echo("Error caught " . $e);
+            echo "Error caught " . $e;
             exit(1);
         }
     }

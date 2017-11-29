@@ -29,9 +29,7 @@ class MySQL{
         catch(\PDOException $ex) 
         { 
             //error_log($ex->getMessage() . PHP_EOL, 3, "database_error_log.log");
-            //$this->returnError($ex);
-            echo "xD";
-            exit(1);
+            $this->returnError($ex);
         } 
 
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
