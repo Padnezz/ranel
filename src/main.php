@@ -8,6 +8,7 @@
 namespace ranel;
 
 include_once(dirname(__FILE__)."/include/classes/Database.php");
+include_once(dirname(__FILE__)."/include/config.php");
 
 try
 {
@@ -15,8 +16,12 @@ try
 }
 catch(\Exception $e)
 {
-    fwrite(STDERR, "Error caught " . $e);
-    exit(1);
+    if(\ranel\Config\General::DEBUG){
+        if(\ranel\Config\General::DEBUGEXIT)
+        {
+            exit("Non-fatal error caught: " . $e);
+        }
+    }
 }
 
 ?>

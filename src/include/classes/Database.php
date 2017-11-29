@@ -19,8 +19,7 @@ class Database{
         }
         catch(\Exception $e)
         {
-            fwrite(STDERR, "Error caught " . $e);
-            exit(1);
+            throw new \Exception($e);
         }
     }
     
