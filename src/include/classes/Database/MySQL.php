@@ -26,7 +26,7 @@ class MySQL{
         { 
             $this->db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options); 
         } 
-        catch(PDO\PDOException $ex) 
+        catch(\PDOException $ex) 
         { 
             //error_log($ex->getMessage() . PHP_EOL, 3, "database_error_log.log");
             //$this->returnError($ex);
@@ -68,7 +68,7 @@ class MySQL{
             $stmt = $this->db->prepare($query); 
             $result = $stmt->execute($queryArray); 
         }
-        catch(PDO\PDOException $ex)
+        catch(\PDOException $ex)
         {
             $this->returnError($ex);
         }
@@ -93,7 +93,7 @@ class MySQL{
             $stmt = $this->db->prepare($query); 
             $result = $stmt->execute($queryArray); 
         }
-        catch(PDO\PDOException $ex)
+        catch(\PDOException $ex)
         {
             $this->returnError($ex);
         }
