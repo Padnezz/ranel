@@ -19,7 +19,8 @@ class Database{
         }
         catch(\Exception $e)
         {
-            exit("Error caught " . $e);
+            echo "Error caught " . $e;
+            exit(1);
         }
     }
     
