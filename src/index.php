@@ -7,7 +7,7 @@
 
 namespace ranel;
 
-require_once(dirname(__FILE__)."/include/config.php");
+include_once(dirname(__FILE__)."/include/config.php");
 
 ?>
 <!DOCTYPE html>

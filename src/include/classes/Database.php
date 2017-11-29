@@ -6,8 +6,8 @@
 
 namespace ranel\Database;
 
-require_once(dirname(__FILE__)."/../config.php");
-require_once(dirname(__FILE__)."/Database/MySQL.php");
+include_once(dirname(__FILE__)."/../config.php");
+include_once(dirname(__FILE__)."/Database/MySQL.php");
 
 class Database{
 
@@ -19,7 +19,8 @@ class Database{
         }
         catch(Exception $e)
         {
-            die("Error caught " . $e);
+            echo("Error caught " . $e);
+            exit(1);
         }
     }
     

@@ -7,7 +7,7 @@
 
 namespace ranel;
 
-require_once(dirname(__FILE__)."/include/classes/Database.php");
+include_once(dirname(__FILE__)."/include/classes/Database.php");
 
 try
 {
@@ -15,7 +15,8 @@ try
 }
 catch(Exception $e)
 {
-    die("Error caught " . $e);
+    echo("Error caught " . $e);
+    exit(1);
 }
 
 ?>
