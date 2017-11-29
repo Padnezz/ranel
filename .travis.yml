@@ -11,3 +11,6 @@ php:
   - 7.0
 
 script: bash test.sh
+
+notifications: 
+  email: false
