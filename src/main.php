@@ -15,8 +15,7 @@ try
 }
 catch(\Exception $e)
 {
-    echo "Error caught " . $e;
-    exit(1);
+    exit("Error caught " . $e);
 }
 
 ?>
