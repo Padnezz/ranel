@@ -17,7 +17,7 @@ class Database{
         {
             $MySQL = new \ranel\Database\MySQL();
         }
-        catch(Exception $e)
+        catch(\ranel\Exception $e)
         {
             echo "Error caught " . $e;
             exit(1);

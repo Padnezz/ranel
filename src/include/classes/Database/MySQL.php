@@ -100,7 +100,7 @@ class MySQL{
 
     public function returnError($error)
     {
-        throw new Exception($error);
+        throw new \ranel\Exception($error);
     }
 
 }

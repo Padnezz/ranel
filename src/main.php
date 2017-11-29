@@ -13,7 +13,7 @@ try
 {
     $MySQL = new \ranel\Database\Database();
 }
-catch(Exception $e)
+catch(\ranel\Exception $e)
 {
     echo "Error caught " . $e;
     exit(1);
