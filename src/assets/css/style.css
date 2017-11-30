@@ -4,3 +4,12 @@
     left: 0;
     right: 0;
 }
+
+.login-form{
+    margin: auto;
+    width: 40%
+}
+
+.login-form .submit{
+    float: right;
+}
