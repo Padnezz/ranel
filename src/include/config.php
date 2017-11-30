@@ -12,7 +12,7 @@ class General{
     //The company name that will be shown on the website
     const COMPANYNAME = 'Brand Inc.';    
 
-    //If errors should be transfered in plain text to the user on the website instead of live enviroment
+    //If errors should be transfered in plain text to the user on the website.
     const DEBUG = true;
 
     //Should non-php errors exit the script?
