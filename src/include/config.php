@@ -17,9 +17,15 @@ class General{
 
     //Should non-php errors exit the script?
     const DEBUGEXIT = true;
+}
 
+class Design{
+    //Set primary color and secondary color and use it according to Material Design
     const PRIMARYCOLOR = "#2196F3";
-    const SECONDARYCOLOR = "#9C27B0"; 
+    const SECONDARYCOLOR = "#9C27B0";
+
+    //What theme should be used on the site? Possible arguments is DARK or LIGHT
+    const THEME = "LIGHT";
 }
 
 //Database configuration for MySQL
