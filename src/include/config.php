@@ -18,8 +18,8 @@ class General{
     //Should non-php errors exit the script?
     const DEBUGEXIT = true;
 
-    const PRIMARYCOLOR = "";
-    const SECONDARYCOLOR = "";
+    const PRIMARYCOLOR = "#2196F3";
+    const SECONDARYCOLOR = "#9C27B0"; 
 }
 
 //Database configuration for MySQL
