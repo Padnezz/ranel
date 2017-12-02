@@ -1,15 +1,15 @@
-.page-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.woff2");
 }
-
-.login-form{
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.index-nav{
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+.form-signin{
+    max-width: 300px;
     margin: auto;
-    width: 40%
-}
-
-.login-form .submit{
-    float: right;
 }
