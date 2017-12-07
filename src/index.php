@@ -3,64 +3,77 @@
 /*
  * @Author: André Pettersson 
  * @Date: 2017-11-23 20:58:10 
+ * Login page
  */
 
 namespace ranel;
 
 include_once(dirname(__FILE__)."/include/config.php");
+include_once(dirname(__FILE__)."/include/general_init.php");
 
 ?>
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title><?php echo \ranel\Config\General::COMPANYNAME; ?> - Inventory</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><?php echo \ranel\Config\General::COMPANYNAME; ?></a>
+    <title><?php echo \ranel\Config\General::COMPANYNAME; ?> - Inloggning</title>
 
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+    <script>
+      $(document).ready(
+        function(){
+          $("body").css("background-color", "<?php echo $theme_body_color; ?>");
+          $(".index-nav").css("background-color", "<?php echo \ranel\Config\Design::PRIMARYCOLOR; ?>");
+          $(".signin-btn").css("background-color", "<?php echo \ranel\Config\Design::SECONDARYCOLOR; ?>");
+          colorText(".signin-btn");
+          colorText(".index-nav");
+          if($("body").css("background-color") == "rgb(250, 250, 250)")
+          {
+            $("label").css("color", "black");
+            $("h2").css("color", "black");
+          }
+          if($("body").css("background-color") == "rgb(48, 48, 48)")
+          {
+            $("label").css("color", "white");
+            $("h2").css("color", "white");
+          }
+        }
+      )
+    </script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light index-nav"><h3><?php echo \ranel\Config\General::COMPANYNAME; ?></h3></nav>
+
     <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-      </div>
-      <br><br>
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-block signin-btn" type="submit">Sign in</button>
+      </form>
 
     </div>
-  </div>
-
-
-    <br><br>
-  </div>
-
-  <footer class="page-footer orange">
-    <div class="footer-copyright">
-      <div class="container">
-      Made with <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> and author <a class="orange-text text-lighten-3" href="https://github.com/Padnezz">Padnezz</a>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="assets/js/jquery-3.2.1.min.js"></script>
-  <script src="assets/js/materialize.js"></script>
-  <script src="assets/js/script.js"></script>
-
   </body>
 </html>

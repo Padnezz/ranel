@@ -2,6 +2,7 @@
 /*
  * @Author: André Pettersson 
  * @Date: 2017-11-24 17:39:24 
+ * MySQL database handling
  */
 
 namespace ranel\Database;
