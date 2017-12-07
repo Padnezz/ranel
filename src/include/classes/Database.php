@@ -2,6 +2,7 @@
 /*
  * @Author: André Pettersson 
  * @Date: 2017-11-24 17:39:16 
+ * Database file that will be called by frontend pages and talk to other database files for different types of databases
  */
 
 namespace ranel\Database;

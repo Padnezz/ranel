@@ -1,3 +1,9 @@
+/*
+ * @Author: André Pettersson 
+ * @Date: 2017-12-06 11:52:20 
+ * css styling outside of bootstrap
+ */
+
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto/Roboto-Regular.woff2");

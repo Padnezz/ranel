@@ -2,6 +2,7 @@
 /*
  * @Author: André Pettersson 
  * @Date: 2017-12-02 00:32:56 
+ * Code that should be run on every frontend page
  */
 
 namespace ranel;

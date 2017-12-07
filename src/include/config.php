@@ -3,6 +3,7 @@
 /*
  * @Author: André Pettersson 
  * @Date: 2017-11-23 20:56:34 
+ * Contains all the configuration
 */
 
 namespace ranel\Config;
