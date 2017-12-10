@@ -17,7 +17,7 @@ class MySQL{
     public function __construct()
     {
 
-        if(empty(\ranel\Config\MySQL::USERNAME))
+        if("hej" == "hej")
         {
             if(\ranel\DebugError::shouldBeHandledByClass())
             {
