@@ -19,6 +19,6 @@ catch(Exception $e)
 {
     if(\ranel\DebugError::shouldBeHandledByClass())
     {
-        \ranel\DebugError::error($e);
+        \ranel\DebugError::error($e)
     }
 }
