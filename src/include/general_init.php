@@ -7,8 +7,8 @@
 
 namespace ranel;
 
-include_once(dirname(__FILE__)."/config.php");
-include_once(dirname(__FILE__)."/classes/DebugError.php");
+require_once(dirname(__FILE__)."/config.php");
+require_once(dirname(__FILE__)."/classes/DebugError.php");
 
 //Check if primary and secondary color is set
 if(empty(\ranel\Config\Design::PRIMARYCOLOR))

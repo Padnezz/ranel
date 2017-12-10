@@ -8,7 +8,7 @@
 
 namespace ranel;
 
-include_once(dirname(__FILE__)."/../config.php");
+require_once(dirname(__FILE__)."/../config.php");
 
 class DebugError{
     public function shouldBeHandledByClass()

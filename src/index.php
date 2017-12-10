@@ -8,8 +8,8 @@
 
 namespace ranel;
 
-include_once(dirname(__FILE__)."/include/config.php");
-include_once(dirname(__FILE__)."/include/general_init.php");
+require_once(dirname(__FILE__)."/include/config.php");
+require_once(dirname(__FILE__)."/include/general_init.php");
 
 ?>
 

@@ -30,6 +30,11 @@ class Design{
     const THEME = "LIGHT";
 }
 
+class Database{
+    //string. The database engine to use    
+    const ENGINE = "MySQL";
+}
+
 //Database configuration for MySQL
 class MySQL{
     //string. The name of the database we should use
@@ -37,9 +42,9 @@ class MySQL{
     //string. IP or FQDN to the database
     const HOST = "127.0.0.1";
     //string. Username to the database
-    const USERNAME = "user";
+    const USERNAME = "root";
     //string. Password to the database
-    const PASSWORD = "pass";
+    const PASSWORD = "secret";
 }
 
 ?>
