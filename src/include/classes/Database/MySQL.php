@@ -17,28 +17,19 @@ class MySQL{
     public function __construct()
     {
 
-        if("hej" == "hej")
+        if(empty(\ranel\Config\MySQL::USERNAME))
         {
-            if(\ranel\DebugError::shouldBeHandledByClass())
-            {
-                \ranel\DebugError::error("No username is set in MySQL.php");
-            }
+            throw new \Exception("No username is set in MySQL::USERNAME");
         }
 
         if(empty(\ranel\Config\MySQL::HOST))
         {
-            if(\ranel\DebugError::shouldBeHandledByClass())
-            {
-                \ranel\DebugError::error("No host is set in MySQL.php");
-            }
+            throw new \Exception("No host is set in MySQL::HOST");
         }
 
         if(empty(\ranel\Config\MySQL::DATABASE))
         {
-            if(\ranel\DebugError::shouldBeHandledByClass())
-            {
-                \ranel\DebugError::error("No database is set in MySQL.php");
-            }
+            throw new \Exception("No database is set in MySQL::DATABASE");
         }
 
         $username = \ranel\Config\MySQL::USERNAME;

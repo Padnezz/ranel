@@ -42,7 +42,7 @@ class MySQL{
     //string. IP or FQDN to the database
     const HOST = "127.0.0.1";
     //string. Username to the database
-    const USERNAME = "root";
+    const USERNAME = "";
     //string. Password to the database
     const PASSWORD = "secret";
 }

@@ -15,7 +15,15 @@ class Database{
     public function __construct()
     {
         switch(\ranel\Config\Database::ENGINE){
-            case "MySQL": 
+            case "MySQL":
+                try
+                {
+                    $mysql = new \ranel\Database\MySQL();
+                }
+                catch(Exception $e)
+                {
+                    throw new \Exception($e);
+                }
             break;
             default:
                 throw new \Exception("No valid engine in configuration was specified at Database::ENGINE");
