@@ -13,7 +13,7 @@ require_once(dirname(__FILE__)."/include/config.php");
 
 try
 {
-    $MySQL = new \ranel\Database\Database();
+    $MySQL = new \ranel\Database();
 }
 catch(\Exception $e)
 {
