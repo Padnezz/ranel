@@ -8,7 +8,7 @@
 namespace ranel;
 
 require_once(dirname(__FILE__)."/../include/config.php");
-require_once(dirname(__FILE__)."/../include/classes/Database.php");
+require_once(dirname(__FILE__)."/../include/classes/Database.php")
 require_once(dirname(__FILE__)."/../include/classes/DebugError.php");
 
 try
