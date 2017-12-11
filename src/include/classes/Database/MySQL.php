@@ -54,8 +54,10 @@ class MySQL{
         } 
         catch(\PDOException $ex) 
         { 
-            //error_log($ex->getMessage() . PHP_EOL, 3, "database_error_log.log");
-            $this->returnError($ex);
+            if(\ranel\DebugError::shouldBeHandledByClass())
+            {
+                \ranel\DebugError::error($ex);
+            }
         } 
 
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
