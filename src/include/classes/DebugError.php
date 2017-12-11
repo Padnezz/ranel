@@ -11,7 +11,7 @@ namespace ranel;
 require_once(dirname(__FILE__)."/../config.php");
 
 class DebugError{
-    public function shouldBeHandledByClass()
+    public static function shouldBeHandledByClass()
     {
         if(\ranel\Config\General::DEBUG || \ranel\Config\General::DEBUGEXIT)
         {
@@ -23,7 +23,7 @@ class DebugError{
         }
     }
 
-    public function error($error)
+    public static function error($error)
     {
         if(\ranel\Config\General::DEBUG)
         {
