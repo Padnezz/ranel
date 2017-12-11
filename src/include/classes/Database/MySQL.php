@@ -54,9 +54,9 @@ class MySQL{
         } 
         catch(\PDOException $ex) 
         { 
-            if(\ranel\DebugError\shouldBeHandledByClass())
+            if(\ranel\DebugError::shouldBeHandledByClass())
             {
-                \ranel\DebugError\error($ex);
+                \ranel\DebugError::error($ex);
             }
         } 
 
