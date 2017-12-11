@@ -19,17 +19,26 @@ class MySQL{
 
         if(empty(\ranel\Config\MySQL::USERNAME))
         {
-            throw new \Exception("No username is set in MySQL::USERNAME");
+            if(\ranel\DebugError::shouldBeHandledByClass())
+            {
+                \ranel\DebugError::error("No username is set in MySQL::USERNAME");
+            }
         }
 
         if(empty(\ranel\Config\MySQL::HOST))
         {
-            throw new \Exception("No host is set in MySQL::HOST");
+            if(\ranel\DebugError::shouldBeHandledByClass())
+            {
+                \ranel\DebugError::error("No host is set in MySQL::USERNAME");
+            }
         }
 
         if(empty(\ranel\Config\MySQL::DATABASE))
         {
-            throw new \Exception("No database is set in MySQL::DATABASE");
+            if(\ranel\DebugError::shouldBeHandledByClass())
+            {
+                \ranel\DebugError::error("No database is set in MySQL::USERNAME");
+            }
         }
 
         $username = \ranel\Config\MySQL::USERNAME;

@@ -16,17 +16,13 @@ class Database{
     {
         switch(\ranel\Config\Database::ENGINE){
             case "MySQL":
-                try
-                {
-                    $mysql = new \ranel\Database\MySQL();
-                }
-                catch(Exception $e)
-                {
-                    throw new \Exception($e);
-                }
+                $mysql = new \ranel\Database\MySQL();
             break;
             default:
-                throw new \Exception("No valid engine in configuration was specified at Database::ENGINE");
+                if(\ranel\DebugError::shouldBeHandledByClass())
+                {
+                    \ranel\DebugError::error("No valid engine in configuration was specified at Database::ENGINE");
+                }
             break;
         }
     }

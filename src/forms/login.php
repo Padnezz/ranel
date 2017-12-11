@@ -8,17 +8,7 @@
 namespace ranel;
 
 require_once(dirname(__FILE__)."/../include/config.php");
-require_once(dirname(__FILE__)."/../include/classes/Database.php")
+require_once(dirname(__FILE__)."/../include/classes/Database.php");
 require_once(dirname(__FILE__)."/../include/classes/DebugError.php");
 
-try
-{
-    $database = new \ranel\Database();
-}
-catch(Exception $e)
-{
-    if(\ranel\DebugError::shouldBeHandledByClass())
-    {
-        \ranel\DebugError::error($e)
-    }
-}
+$database = new \ranel\Database();
