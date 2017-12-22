@@ -1,27 +1,28 @@
 <?php
 /*
- * @Author: André Pettersson 
- * @Date: 2017-11-24 17:39:16 
- * Database file that will be called by frontend pages and talk to other database files for different types of databases
+ * @Author: André Pettersson
+ * @Date: 2017-11-24 17:39:16
+ * Database file that will be called by files and talk to other database files for different types of databases
  */
 
-namespace ranel\Database;
+namespace ranel;
 
-include_once(dirname(__FILE__)."/../config.php");
-include_once(dirname(__FILE__)."/Database/MySQL.php");
+require_once dirname(__FILE__).'/../config.php';
+require_once dirname(__FILE__).'/Database/MySQL.php';
 
-class Database{
-
+class Database
+{
     public function __construct()
     {
-        try
-        {
-            $MySQL = new \ranel\Database\MySQL();
-        }
-        catch(\Exception $e)
-        {
-            throw new \Exception($e);
+        switch (\ranel\Config\Database::ENGINE) {
+            case 'MySQL':
+                $mysql = new \ranel\Database\MySQL();
+            break;
+            default:
+                if (\ranel\DebugError::shouldBeHandledByClass()) {
+                    \ranel\DebugError::error('No valid engine in configuration was specified at Database::ENGINE');
+                }
+            break;
         }
     }
-    
 }

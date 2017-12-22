@@ -1,15 +1,15 @@
 <?php
 
 /*
- * @Author: André Pettersson 
- * @Date: 2017-11-23 20:58:10 
+ * @Author: André Pettersson
+ * @Date: 2017-11-23 20:58:10
  * Login page
  */
 
 namespace ranel;
 
-include_once(dirname(__FILE__)."/include/config.php");
-include_once(dirname(__FILE__)."/include/general_init.php");
+require_once dirname(__FILE__).'/include/config.php';
+require_once dirname(__FILE__).'/include/general_init.php';
 
 ?>
 
