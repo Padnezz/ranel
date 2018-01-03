@@ -22,13 +22,13 @@ class General
 
 class Design
 {
-    //string. Set primary color and secondary color and use it according to Material Design
+    //string. Set primary color and secondary color in hex and use it according to Material Design
     const PRIMARYCOLOR = '#2196F3';
-    //string
+    //string 
     const SECONDARYCOLOR = '#9C27B0';
 
     //string. What theme should be used on the site? Possible arguments is DARK or LIGHT
-    const THEME = 'LIGHT';
+    const THEME = 'DARK';
 }
 
 class Database
