@@ -12,7 +12,6 @@ require_once dirname(__FILE__).'/../config.php';
 
 class Error
 {
-
     public static function error($error)
     {
         if (\ranel\Config\General::DEBUG || \ranel\Config\General::DEBUGEXIT) {
