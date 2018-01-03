@@ -8,7 +8,7 @@
 namespace ranel\Database;
 
 require_once dirname(__FILE__).'/../../config.php';
-require_once dirname(__FILE__).'/../DebugError.php';
+require_once dirname(__FILE__).'/../Error.php';
 
 class MySQL
 {
@@ -17,21 +17,15 @@ class MySQL
     public function __construct()
     {
         if (empty(\ranel\Config\MySQL::USERNAME)) {
-            if (\ranel\DebugError::shouldBeHandledByClass()) {
-                \ranel\DebugError::error('No username is set in MySQL::USERNAME');
-            }
+            \ranel\Error::error('No username is set in MySQL::USERNAME');
         }
 
         if (empty(\ranel\Config\MySQL::HOST)) {
-            if (\ranel\DebugError::shouldBeHandledByClass()) {
-                \ranel\DebugError::error('No host is set in MySQL::USERNAME');
-            }
+            \ranel\Error::error('No host is set in MySQL::USERNAME');
         }
 
         if (empty(\ranel\Config\MySQL::DATABASE)) {
-            if (\ranel\DebugError::shouldBeHandledByClass()) {
-                \ranel\DebugError::error('No database is set in MySQL::USERNAME');
-            }
+            \ranel\Error::error('No database is set in MySQL::USERNAME');
         }
 
         $username = \ranel\Config\MySQL::USERNAME;
@@ -44,9 +38,7 @@ class MySQL
         try {
             $this->db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options);
         } catch (\PDOException $ex) {
-            if (\ranel\DebugError::shouldBeHandledByClass()) {
-                \ranel\DebugError::error($ex);
-            }
+            \ranel\Error::error($ex);
         }
 
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

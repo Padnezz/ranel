@@ -8,33 +8,25 @@
 namespace ranel;
 
 require_once dirname(__FILE__).'/config.php';
-require_once dirname(__FILE__).'/classes/DebugError.php';
+require_once dirname(__FILE__).'/classes/Error.php';
 
 //Check if primary and secondary color is set
 if (empty(\ranel\Config\Design::PRIMARYCOLOR)) {
-    if (\ranel\DebugError::shouldBeHandledByClass()) {
-        \ranel\DebugError::error('No primary color is set at Design::PRIMARYCOLOR');
-    }
+    \ranel\DebugError::error('No primary color is set at Design::PRIMARYCOLOR');
 }
 
 if (empty(\ranel\Config\Design::SECONDARYCOLOR)) {
-    if (\ranel\DebugError::shouldBeHandledByClass()) {
-        \ranel\DebugError::error('No secondary color is set at Design::PRIMARYCOLOR');
-    }
+    \ranel\DebugError::error('No secondary color is set at Design::PRIMARYCOLOR');
 }
 
 //Check if Design::THEME is a valid value or empty
 if (empty(\ranel\Config\Design::THEME)) {
-    if (\ranel\DebugError::shouldBeHandledByClass()) {
-        \ranel\DebugError::error('No theme is set at Design::THEME');
-    }
+    \ranel\DebugError::error('No theme is set at Design::THEME');
 }
 
 if (\ranel\Config\Design::THEME !== 'LIGHT') {
     if (\ranel\Config\Design::THEME !== 'DARK') {
-        if (\ranel\DebugError::shouldBeHandledByClass()) {
-            \ranel\DebugError::error('Design::THEME is set to an invalid value');
-        }
+        \ranel\DebugError::error('Design::THEME is set to an invalid value');
     }
 }
 
