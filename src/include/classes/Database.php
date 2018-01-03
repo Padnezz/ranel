@@ -8,6 +8,7 @@
 namespace ranel;
 
 require_once dirname(__FILE__).'/../config.php';
+require_once dirname(__FILE__).'/Error.php';
 require_once dirname(__FILE__).'/Database/MySQL.php';
 
 class Database
@@ -19,9 +20,7 @@ class Database
                 $mysql = new \ranel\Database\MySQL();
             break;
             default:
-                if (\ranel\DebugError::shouldBeHandledByClass()) {
-                    \ranel\DebugError::error('No valid engine in configuration was specified at Database::ENGINE');
-                }
+                \ranel\Error::error('No valid engine in configuration was specified at Database::ENGINE');
             break;
         }
     }
