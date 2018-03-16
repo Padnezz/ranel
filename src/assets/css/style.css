@@ -19,3 +19,6 @@ body{
     max-width: 300px;
     margin: auto;
 }
+.navbar .company-name{
+    margin-top: 8px;
+}

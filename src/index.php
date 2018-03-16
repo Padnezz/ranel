@@ -56,7 +56,7 @@ require_once dirname(__FILE__).'/include/general_init.php';
 
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light index-nav"><h3><?php echo \ranel\Config\General::COMPANYNAME; ?></h3></nav>
+    <nav class="navbar navbar-expand-lg navbar-light index-nav"><h3 class="company-name"><?php echo \ranel\Config\General::COMPANYNAME; ?></h3></nav>
 
     <div class="container">
 
